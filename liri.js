@@ -59,8 +59,14 @@ function spotifyThisSong(newData) {
         console.log(`Error occured ${err}`);
         return;
       } else {
-        console.log(result.tracks.items[0].album.artists);
-        console.log(result.tracks.items[0].album.name);
+        // console.log(result.tracks.items.length);
+
+        console.log(
+          `**********************SONG DETAILS*************************`
+        );
+        console.log(
+          `The songs name is:- ${result.tracks.items[0].name} \nThe artist name is :- ${result.tracks.items[0].album.artists[0].name}\nThe preview link is :- ${result.tracks.items[0].album.artists[0].external_urls.spotify} \nThe album of the song is :- ${result.tracks.items[0].album.name}`
+        );
       }
     }
   );
@@ -78,7 +84,9 @@ function concertThis(newData) {
     let res = result.data[0];
     // console.log(res);
     console.log(
-      `The venue name is :- ${res.venue.name} \n the country of the venue is ${res.venue.country} \n and the date is  ${res.dateTime}`
+      `The venue name is :- ${res.venue.name} \nThe country of the venue is ${
+        res.venue.country
+      } \nThe date is  ${moment(res.dateTime).format("DD-MM-YYYY")}`
     );
   });
 }
@@ -87,10 +95,17 @@ function movieThis(newData) {
   var data;
   if (newData === undefined) {
     data = process.argv.slice(3).join(" ");
+    if (data === "") {
+      console.log("***************Default Data (Mr.Nobody)***************");
+      data = "Mr. Nobody";
+    }
   } else if (newData !== undefined) data = newData;
 
   const URL = `http://www.omdbapi.com/?t=${data}&apikey=trilogy`;
   axios.get(URL).then(result => {
-    console.log(result);
+    let path = result.data;
+    console.log(
+      `The title of the movies :-${path.Title} \nYear of Release :- ${path.Year} \nIMDB Rating :-${path.imdbRating} \nCountry where movie was produced :-${path.Country} \nLanguage of Movie :-${path.Language} \nPlot of the movie :-${path.Plot} \nActors in the movie :-${path.Actors}`
+    );
   });
 }
