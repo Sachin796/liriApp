@@ -1,6 +1,4 @@
-# liriApp
-
-    # Liri Bot App (Node.JS)
+# liriApp (Node JS)
 
 The project consists of a **LiriBot** which is a Node App.
 
@@ -42,7 +40,7 @@ The working of the app is as Follows :-
 
 - Venue location
 
-- Date of the Event (use moment to format this as "MM/DD/YYYY")
+- Date of the Event
 
 **4. spotify-this song (Song Name) :-**
 
