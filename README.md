@@ -72,6 +72,20 @@
 
     - The do what is says is the option which a user can use to default the action of the result to be displayed. The action is provided in a file by the user and this function reads the file and displays appropriate output.
 
+## Tech Stack
+
+- ### Front End
+
+   <img src="./images/HTML.png" width="100" height="100"> 
+   <img src="./images/CSS.png" width="100" height="100"> 
+   <img src="./images/javascript.png" width="100" height="100">
+   <img src="./images/bootstrap.png" width="100" height="100"> 
+
+- ### Backend(Server Side)
+
+   <img src="./images/node.png" width="100" height="100"> 
+   <img src="./images/express.png" width="100" height="100"> 
+
 ### Demo Of the App
 
 [Click Here](https://youtu.be/WRF9ytneNIM)
