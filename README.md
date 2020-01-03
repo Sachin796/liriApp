@@ -1,6 +1,7 @@
-    # liriApp (Node JS)
+## liriApp (Node JS)
 
-    The project consists of a **LiriBot** which is a Node App.
+- The project consists of a **LiriBot** which is a Node App.
+
 
     # API's And Packages Used
 
